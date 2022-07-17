@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+/* header */
+.header{
+  
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-family: 20px;
+
+}
+.header h2{
+    margin-top: 30px;
+    text-align: center;
+    margin: 60px;
+    font-weight: bold;
+
+}
+.contain{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 70px;
+    margin: auto;
+    width: 100%;
+    align-items: center;
+}
+.contact-info{
+    border: 3px solid rgb(41, 39, 39);
+    background: rgb(137, 136, 136);;
+}
+ button{
+    width: 120px;
+    float: right;
+    height: 30px;
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: -2px;;
+    border: 1px solid rgb(15, 14, 14);
+}
+.contact-info .btn-f{
+    background-color: pink;
+}
+.contact-info .btn-s{
+    background-color: rgb(238, 24, 60);
+    color:#fff;
+}
+.contact-info .btn-t{
+    background-color: rgb(241, 226, 88);
+}
+.contact-info p{
+    margin: 30px;
+    
+}
+@media (max-width:991px) and (min-width:768px){
+    .contain{
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        /* grid-template-columns: repeat(2, 1fr); */
+    }
+    .col-1-3{
+        grid-column: 1/3;
+      }
+
+    .header h2{
+        text-align: center;
+        font-size: 22px;
+        margin: 60px;
+        font-weight: bold;
+    
+    
+    }
+}
+
+/* (max-width: 991px) and (min-width: 768px) */
+@media (max-width: 767px) {
+    .contain{
+        display:grid;
+        grid-template-columns:  1fr;
+    }
+    .header h2{
+        margin-top: -10px;
+        text-align: center;
+        margin: 60px;
+        font-weight: bold;
+    
+    }
+}
+
