@@ -1,95 +1,109 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,900;1,400;1,700&display=swap');
 *{
     margin: 0;
-    padding:0;
+    padding: 0;
     box-sizing: border-box;
 }
-
-/* header */
-.header{
-  
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-family: 20px;
-
+body{
+    font-family: 'Lato', sans-serif;
+    margin: 1.5rem;
 }
-.header h2{
-    margin-top: 30px;
+h2{
+    margin: 50px 50px;
     text-align: center;
-    margin: 60px;
-    font-weight: bold;
-
+    font-size: 38px
 }
-.contain{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-    padding: 20px;
-    margin-top: 70px;
-    margin: auto;
+.menu{
     width: 100%;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.5rem;
+    margin:auto;
+    margin-bottom: 60px;
 }
-.contact-info{
-    border: 3px solid rgb(41, 39, 39);
-    background: rgb(137, 136, 136);;
+
+.chicken{
+    border: 1px solid black;
+    background: rgb(176, 241, 150);
 }
- button{
-    width: 120px;
+.chicken h3{
+   float: right;
+   width: 155px;
+   text-align: center;
+    border: 1px solid black;
+    background: rgb(244, 204, 59);
+}
+.beef{
+    border: 1px solid black;
+    background: rgb(152, 152, 234);
+}
+.beef h3{
+    width: 155px;
+   color: #fff;
+    text-align: center;
     float: right;
-    height: 30px;
-    font-size: 20px;
-    font-weight: 400;
-    margin-top: -2px;;
-    border: 1px solid rgb(15, 14, 14);
+    border: 1px solid black;
+    background: red;;
 }
-.contact-info .btn-f{
-    background-color: pink;
+.sushi{
+    border: 1px solid black;
+    background: rgb(163, 240, 243);
 }
-.contact-info .btn-s{
-    background-color: rgb(238, 24, 60);
-    color:#fff;
+.sushi h3{
+    width: 155px;
+    text-align: center;
+    float: right;
+    border: 1px solid black;
+    background: rgb(73, 239, 120);
 }
-.contact-info .btn-t{
-    background-color: rgb(241, 226, 88);
+p{
+    margin:30px 10px;
+    font-size: 18px;
 }
-.contact-info p{
-    margin: 30px;
-    
-}
-@media (max-width:991px) and (min-width:768px){
-    .contain{
-        display:grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: auto;
-        /* grid-template-columns: repeat(2, 1fr); */
-    }
-    .col-1-3{
-        grid-column: 1/3;
+
+/* 992px and above desktop */
+@media only screen and (min-width: 992px) {
+      .menu{
+        display: grid;
+        grid-template-columns: 1fr 1fr,1fr;
+        gap: 1.5rem;
       }
-
-    .header h2{
-        text-align: center;
-        font-size: 22px;
-        margin: 60px;
-        font-weight: bold;
-    
-    
     }
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px){
+        .menu{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        .sushi{
+            grid-column: 1/-1;
+            width: 100%;
+            padding: 1.5rem;
+        }
+        .sushi h3{
+            float: right;
+          
+            text-align: center;
+            float: right;
+            
+            margin-top: -25px;
+            margin-right: -25px;
+        }
 }
-
-/* (max-width: 991px) and (min-width: 768px) */
-@media (max-width: 767px) {
-    .contain{
-        display:grid;
-        grid-template-columns:  1fr;
-    }
-    .header h2{
-        margin-top: -10px;
-        text-align: center;
-        margin: 60px;
-        font-weight: bold;
+       
     
+     
+  
+
+/* 767px and below mobile */
+@media only screen and (max-width:767px) {
+    .menu{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 }
 
